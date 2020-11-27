@@ -32,6 +32,11 @@ public class ClienteController {
 		this.clienteService = clienteService;
 	}
 	
+	@RequestMapping("/")
+	public String bienvenida() {
+		return "Sea bienvenido del API Clientes";
+	}
+	
 	@RequestMapping("/creacliente")
 	@PostMapping
 	@ApiOperation(value = "Registrar los datos del cliente")
